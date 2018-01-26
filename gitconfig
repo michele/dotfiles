@@ -1,0 +1,24 @@
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[user]
+    name = Michele Finotto
+    email = m@finotto.org
+[alias]
+    st = status
+    ci = commit
+    co = checkout
+    br = branch
+    sm = submodule
+    mg = merge
+[merge]
+    summary = true
+[core]
+    excludesfile = /home/michele/.gitignore
+[apply]
+    whitespace = nowarn
+[push]
+    default = matching
+
