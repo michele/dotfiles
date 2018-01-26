@@ -76,4 +76,4 @@ nvim +PlugInstall +qall
 
 printf "\n\nWe're now ready to install dotfiles.\n"
 
-./install.sh
+./install
