@@ -1,0 +1,7 @@
+#! /bin/sh
+name=timescaledb
+port=5438
+create="docker run -d --name timescaledb -e POSTGRES_USER=dev_user -e POSTGRES_PASSWORD=dev_password -p 127.0.0.1:$port:5432 timescale/timescaledb-postgis"
+
+source docker-handler-base
+

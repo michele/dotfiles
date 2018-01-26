@@ -1,0 +1,6 @@
+#! /bin/sh
+name=localstack
+port=4576
+create="docker run -d -p 127.0.0.1:$port:4576 --name $name localstack/localstack:latest"
+
+source docker-handler-base

@@ -1,0 +1,18 @@
+case "$1" in
+   create)
+            echo –n "Creating $name..."
+            $create
+            ;;
+     stop)
+          echo –n "Stopping $name..."
+          docker stop $name
+           ;;
+    start)
+            echo -n "Starting $name..."
+            docker start $name
+            ;;
+        *)
+          echo "Usage: $0 start|stop|create"
+          exit 1
+          ;;
+    esac

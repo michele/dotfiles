@@ -1,0 +1,6 @@
+#! /bin/sh
+name=postgis
+port=5455
+create="docker run -d -p 127.0.0.1:$port:5432 -e POSTGRES_USER=dev_user -e POSTGRES_PASSWORD=dev_password --name $name mdillon/postgis:9.5"
+
+source docker-handler-base

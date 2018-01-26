@@ -1,0 +1,10 @@
+folder-hook 'finotto' 'source ~/.config/neomutt/accounts/finotto'
+folder-hook 'nearit.com' 'source ~/.config/neomutt/accounts/nearit.com'
+source ~/.config/neomutt/accounts/finotto
+source ~/.config/neomutt/colors/badwolf.muttrc
+#source ~/.config/neomutt/accounts/nearit.com
+
+macro index 1 '<sync-mailbox><refresh><enter-command>source ~/.config/neomutt/accounts/finotto<enter><change-folder>!<enter>'
+macro index 2 '<sync-mailbox><refresh><enter-command>source ~/.config/neomutt/accounts/nearit.com<enter><change-folder>!<enter>'
+# Custom
+ set editor = "nvim"

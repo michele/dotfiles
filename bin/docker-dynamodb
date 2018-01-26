@@ -1,0 +1,6 @@
+#! /bin/sh
+name=dynamodb
+port=8000
+create="docker run -d --name $name -p 127.0.0.1:$port:8000 cnadiminti/dynamodb-local"
+
+source docker-handler-base
