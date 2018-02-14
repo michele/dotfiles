@@ -16,6 +16,7 @@
     ~/.gnupg/gpg-agent.conf: 'gnupg/gpg-agent.conf'
     ~/.neomuttrc:
     ~/.oh-my-zsh/custom/my-aliases.zsh: 'oh-my-zsh/custom/my-aliases.zsh'
+    ~/.oh-my-zsh/custom/plugins/gopass: 'oh-my-zsh/custom/plugins/gopass'
     ~/.tmux.conf:
     ~/.zshrc:
 
