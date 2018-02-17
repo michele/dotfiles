@@ -1,0 +1,4 @@
+export PATH=$PATH:/usr/local/go/bin:$HOME/go/bin
+
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+export GPG_TTY=`tty`
