@@ -229,6 +229,7 @@ bindsym $mod+m exec "/usr/local/bin/switch-audio-port"
 # gopass
 bindsym $mod+Shift+u exec "/home/michele/go/bin/gopass ls --flat | dmenu | xargs --no-run-if-empty gopass show -c"
 # Autostart apps
+exec xrandr --dpi 220
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
