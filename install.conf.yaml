@@ -7,10 +7,12 @@
 
 - link:
     ~/.bin:
+    ~/.config/fontconfig: 'config/fontconfig'
     ~/.config/i3: 'config/i3'
     ~/.config/i3status: 'config/i3status'
     ~/.config/nvim: 'config/nvim'
     ~/.config/neomutt: 'config/neomutt'
+    ~/.config/fontconfig: 'config/fontconfig'
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: 'gnupg/gpg-agent.conf'

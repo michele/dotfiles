@@ -227,6 +227,21 @@ bindsym $mod+n exec "/usr/bin/thunar"
 bindsym $mod+Shift+m exec "/usr/local/bin/switch-audio-port"
 bindsym $mod+m exec spotify --force-device-scale-factor=2
 
+# Move workspace to different monitor
+bindsym $mod+Control+h move workspace to output left
+bindsym $mod+Control+j move workspace to output down
+bindsym $mod+Control+k move workspace to output up
+bindsym $mod+Control+l move workspace to output right
+
+# Setup multi monitor by calling script
+bindsym $mod+Control+d exec ~/.bin/mon.sh
+
+# Turn off external LG monitor
+bindsym $mod+Control+g exec xrandr --output DP-2 --off
+
+# Setup mx scroll
+bindsym $mod+Control+m exec ~/.bin/mx-scroll.sh
+
 # gopass
 bindsym $mod+Shift+u exec "/home/michele/go/bin/gopass ls --flat | dmenu | xargs --no-run-if-empty gopass show -c"
 # Autostart apps
