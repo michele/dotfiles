@@ -27,6 +27,8 @@ let g:deoplete#sources#go#sort_class = ['package', 'func', 'type', 'var', 'const
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<lt>C-p>" : "\<lt>S-Tab>"
 
+let g:NERDTreeWinSize = 40
+
 " Local changes not from dotfiles
 let $LOCALFILE=expand("~/.nvimrc_local")
 if filereadable($LOCALFILE)
