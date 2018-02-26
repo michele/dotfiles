@@ -12,13 +12,15 @@
     ~/.config/i3status: 'config/i3status'
     ~/.config/nvim: 'config/nvim'
     ~/.config/neomutt: 'config/neomutt'
-    ~/.config/fontconfig: 'config/fontconfig'
+    ~/.config/terminator: 'config/terminator'
+    ~/.config/chromium-flags.conf: 'config/chromium-flags.conf'
     ~/.dotfiles: ''
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: 'gnupg/gpg-agent.conf'
     ~/.neomuttrc:
     ~/.oh-my-zsh/custom/my-aliases.zsh: 'oh-my-zsh/custom/my-aliases.zsh'
     ~/.oh-my-zsh/custom/plugins/gopass: 'oh-my-zsh/custom/plugins/gopass'
+    ~/.profile:
     ~/.tmux.conf:
     ~/.zshrc:
 
