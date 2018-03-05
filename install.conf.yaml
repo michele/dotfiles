@@ -12,6 +12,7 @@
     ~/.config/i3status: 'config/i3status'
     ~/.config/nvim: 'config/nvim'
     ~/.config/neomutt: 'config/neomutt'
+    ~/.config/redshift.conf: 'config/redshift.conf'
     ~/.config/terminator: 'config/terminator'
     ~/.config/chromium-flags.conf: 'config/chromium-flags.conf'
     ~/.dotfiles: ''
