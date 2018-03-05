@@ -1,0 +1,70 @@
+[general]
+ui = ttyui
+accounts = MicheleFinotto
+fsync = False
+metadata = ~/.mail/.offlineimap
+pythonfile = ~/.offlineimap.py
+
+[Account MicheleFinotto]
+localrepository = MicheleFinotto-Local
+remoterepository = MicheleFinotto-Remote
+postsynchook = notmuch new
+
+[Repository MicheleFinotto-Local]
+type = Maildir
+localfolders = ~/.mail/finotto
+
+[Repository MicheleFinotto-Remote]
+maxconnections = 3
+type = IMAP
+remotehost = mail.messagingengine.com
+remoteport = 993
+remoteuser = m@finotto.org
+remotepasseval = get_pass("m@finotto.org")
+realdelete = no
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+ssl = yes
+expunge = yes
+#readonly = true
+folderfilter = lambda folder: not re.search('(Airmail|Starred|content-marketing)', folder)
+
+[mbnames]
+enabled = yes
+filename = ~/.mutt/mailboxes
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+
+[Account NearIT]
+localrepository = NearIT-Local
+remoterepository = NearIT-Remote
+postsynchook = notmuch new
+
+[Repository NearIT-Local]
+type = Maildir
+localfolders = ~/.mail/nearit.com
+nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
+                            'sent':    '[Gmail]/Sent Mail',
+                            'flagged': '[Gmail]/Starred',
+                            'trash':   '[Gmail]/Trash',
+                            'archive': '[Gmail]/All Mail',
+                            }.get(folder, folder)
+
+[Repository NearIT-Remote]
+maxconnections = 1
+type = Gmail
+remoteuser = michele@nearit.com
+remotepasseval = get_pass("michele@nearit.com")
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+realdelete = no
+nametrans = lambda folder: {'[Gmail]/Drafts':    'drafts',
+                            '[Gmail]/Sent Mail': 'sent',
+                            '[Gmail]/Starred':   'flagged',
+                            '[Gmail]/Trash':     'trash',
+                            '[Gmail]/All Mail':  'archive',
+                            }.get(folder, folder)
+folderfilter = lambda folder: folder not in [
+                                             '[Gmail]/Important',
+                                             '[Gmail]/Spam',
+                                             ]
