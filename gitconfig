@@ -20,5 +20,5 @@
 [apply]
     whitespace = nowarn
 [push]
-    default = matching
+    default = current
 
