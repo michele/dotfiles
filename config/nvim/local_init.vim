@@ -29,6 +29,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<lt>C-p>" : "\<lt>S-Tab>"
 
 let g:NERDTreeWinSize = 40
 
+let g:airline_powerline_fonts = 1
+
 " Local changes not from dotfiles
 let $LOCALFILE=expand("~/.nvimrc_local")
 if filereadable($LOCALFILE)
