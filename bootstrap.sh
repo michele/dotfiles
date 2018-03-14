@@ -14,7 +14,9 @@ elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
     reqs=( 'zsh:zsh'
            'nvim:neovim'
            'neomutt:neomutt'
-           'tmux:tmux')
+           'tmux:tmux'
+           'lynx:lynx'
+           'w3m:w3m')
 fi
 
 printf "We're about to set up a new $plat system.\nTHIS SHOULD ONLY BE RUN ONCE PER HOST!!!\n\n"

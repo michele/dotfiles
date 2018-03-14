@@ -18,5 +18,5 @@
     cursor_blink = False
     cursor_color = "#babdb6"
     cursor_color_fg = False
-    font = Inconsolata 13
+    font = PragmataPro 13
     use_system_font = False

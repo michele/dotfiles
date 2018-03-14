@@ -4,7 +4,9 @@ setopt +o nomatch
 source ~/na.sh
 # Path to your oh-my-zsh installation.
 export ZSH=~/.oh-my-zsh
-
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
