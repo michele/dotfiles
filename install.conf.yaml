@@ -27,6 +27,7 @@
     ~/.oh-my-zsh/custom/plugins/gopass: 'oh-my-zsh/custom/plugins/gopass'
     ~/.profile:
     ~/.tmux.conf:
+    ~/.tmuxline:
     ~/.zshrc:
 
 - shell:

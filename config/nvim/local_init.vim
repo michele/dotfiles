@@ -31,6 +31,10 @@ let g:NERDTreeWinSize = 40
 
 let g:airline_powerline_fonts = 1
 
+let g:airline#extensions#tmuxline#enabled = 0
+
+let g:airline_theme = 'zenburn'
+
 " Local changes not from dotfiles
 let $LOCALFILE=expand("~/.nvimrc_local")
 if filereadable($LOCALFILE)
