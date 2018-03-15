@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+set -e
+
+printf "We're about to set up a new $plat system.\nTHIS SHOULD ONLY BE RUN ONCE PER HOST!!!\n\n"
+
+read -p "Do you want to continue? (yN) " -n 1 -r
+echo
+
+if [[ ! $REPLY =~ ^[Yy]$ ]]
+then
+    printf "Bye Bye!"
+    [[ "$0" = "$BASH_SOURCE" ]] && exit 1 || return 1
+fi
+
+printf "Let's install Tilix\n"
+sudo pacman -S tilix
+
+printf "Now add support for smartcards to GnuPG\n"
+sudo pacman -S pcsclite ccid
+sudo systemctl enable pcscd
+
+printf "We beed some nice fonts\n"
+sudo pacman -S ttf-dejavu ttf-inconsolata
+
