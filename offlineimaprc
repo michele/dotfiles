@@ -8,7 +8,7 @@ pythonfile = ~/.offlineimap.py
 [Account MicheleFinotto]
 localrepository = MicheleFinotto-Local
 remoterepository = MicheleFinotto-Remote
-postsynchook = notmuch new
+postsynchook = ~/.bin/notmuch-hook
 
 [Repository MicheleFinotto-Local]
 type = Maildir
@@ -39,7 +39,7 @@ footer = "\n"
 [Account NearIT]
 localrepository = NearIT-Local
 remoterepository = NearIT-Remote
-postsynchook = notmuch new
+postsynchook = ~/.bin/notmuch-hook
 
 [Repository NearIT-Local]
 type = Maildir

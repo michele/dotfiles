@@ -65,7 +65,7 @@ bind index R        group-reply
 bind index <tab>    sync-mailbox
 bind index <space>  collapse-thread
 
-macro index S "<enter-command>unset wait_key<enter><shell-escape>mutt-notmuch-py<enter><change-folder-readonly>~/.cache/mutt_results<enter>" \
+macro index S "<enter-command>unset wait_key<enter><shell-escape>~/.bin/mutt-notmuch-py<enter><change-folder-readonly>~/.cache/mutt_results<enter>" \
             "search mail (using notmuch)"
 # Ctrl-R to mark all as read
 macro index \Cr "T~U<enter><tag-prefix><clear-flag>N<untag-pattern>.<enter>" "mark all messages as read"
@@ -161,3 +161,9 @@ set reply_to                         # reply to Reply to: field
 set reverse_name                     # reply as whomever it was to
 set include                          # include message in replies
 set forward_quote                    # include message in forwards
+
+set query_command = "notmuch address %s"
+
+bind editor <Tab> complete-query
+bind editor ^T complete
+

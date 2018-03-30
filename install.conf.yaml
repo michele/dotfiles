@@ -25,9 +25,12 @@
     ~/.offlineimaprc:
     ~/.oh-my-zsh/custom/my-aliases.zsh: 'oh-my-zsh/custom/my-aliases.zsh'
     ~/.oh-my-zsh/custom/plugins/gopass: 'oh-my-zsh/custom/plugins/gopass'
+    ~/.pam_environment:
     ~/.profile:
     ~/.tmux.conf:
     ~/.tmuxline:
+    ~/.xmodmaprc:
+    ~/.xinitrc:
     ~/.zshrc:
 
 - shell:

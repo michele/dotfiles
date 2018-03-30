@@ -22,3 +22,5 @@ sudo systemctl enable pcscd
 printf "We beed some nice fonts\n"
 sudo pacman -S ttf-dejavu ttf-inconsolata
 
+printf "Now some tools\n"
+sudo pacman -S zathura ranger

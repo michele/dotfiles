@@ -1,5 +1,6 @@
 [/]
 new-window-inherit-state=true
+prompt-on-close=true
 tab-position='top'
 terminal-title-style='small'
 theme-variant='light'
@@ -11,13 +12,14 @@ window-style='normal'
 
 [profiles/2b7c4080-0ddd-46c5-8f23-563fd3ba789d]
 foreground-color='#EEEEEEEEECEC'
+visible-name='Default'
 cursor-background-color='#EEEEEEEEECEC'
 cursor-shape='block'
 cursor-colors-set=true
 use-theme-colors=false
 use-system-font=false
 cursor-foreground-color='#2E2E34343636'
-font='PragmataPro Mono 12'
+font='PragmataPro Mono 11'
 cursor-blink-mode='on'
 background-color='#2E2E34343636'
 

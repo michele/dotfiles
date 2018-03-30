@@ -48,8 +48,7 @@ other_email=extra@finotto.org;
 #		in the mail store.
 #
 [new]
-tags=unread;inbox;
-ignore=
+tags=new
 
 # Search configuration
 #

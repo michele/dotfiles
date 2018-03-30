@@ -1,0 +1,6 @@
+#!/bin/sh
+notmuch new
+# tag all messages from "me" as sent and remove tags inbox and unread
+notmuch tag -new +sent -- from:m@finotto.org or from:m@finotto.io
+notmuch tag -new -- tag:new
+
