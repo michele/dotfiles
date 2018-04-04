@@ -3,6 +3,8 @@ set -e
 
 declare -a reqs
 
+godl='go1.10.1.linux-amd64.tar.gz'
+
 if [ "$(uname)" == "Darwin" ]; then
     plat='osx'
     installer='brew install '
@@ -75,6 +77,18 @@ fi
 
 printf "Let's install neovim's plugins\n"
 nvim +PlugInstall +qall
+
+if [ -d /usr/local/go ]; then
+    printf "Go: ok\n"
+else
+    if [[ "$plat" == "linux" ]]; then
+        printf "Who doesn't love some gophers? Let's install go...\n"
+        curl -LO https://dl.google.com/go/$godl
+        sudo tar -C /usr/local -zxf $godl
+        rm $godl
+    fi
+fi
+
 
 printf "\n\nWe're now ready to install dotfiles.\n"
 
