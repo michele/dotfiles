@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:DejaVu Sans Mono 12
+font pango:DejaVu Sans Mono 9
 
 # thin borders
 hide_edge_borders both
@@ -125,7 +125,7 @@ bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # lock
-bindsym $mod+Shift+x exec i3lock --color 475263
+bindsym $mod+Shift+x exec betterlockscreen --lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -254,6 +254,7 @@ exec --no-startup-id "pulseaudio --start"
 #exec --no-startup-id synclient VertScrollDelta=-111
 exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id redshift
+exec --no-startup-id dropbox
 exec --no-startup-id "sleep 5s" # && kalu"
 
 assign [class="google-chrome"]  $w3
