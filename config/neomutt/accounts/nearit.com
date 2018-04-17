@@ -12,7 +12,7 @@ set alias_file       = ~/.mutt/nearit.com/alias         # where to store aliases
 set header_cache     = ~/.mutt/nearit.com/cache/headers # where to store headers
 set message_cachedir = ~/.mutt/nearit.com/cache/bodies  # where to store bodies
 set certificate_file = ~/.mutt/certificates  # where to store certs
-set mailcap_path     = ~/.mutt/mailcap       # entries for filetypes
+set mailcap_path     = ~/.config/neomutt/mailcap       # entries for filetypes
 set tmpdir           = ~/.mutt/temp          # where to keep temp files
 
 

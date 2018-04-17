@@ -92,7 +92,6 @@ bind index,pager <right>  sidebar-open
 bind pager k  previous-line
 bind pager j  next-line
 bind pager g noop
-bind pager gg top
 bind pager G  bottom
 
 bind pager R  group-reply
@@ -170,3 +169,4 @@ set query_command = "notmuch address %s"
 bind editor <Tab> complete-query
 bind editor ^T complete
 
+bind pager gg top
