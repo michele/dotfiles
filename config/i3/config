@@ -29,7 +29,7 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec tilix
+bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -221,7 +221,7 @@ bindsym $mod+F8 exec mocp --next
 
 # App shortcuts
 bindsym $mod+w exec "/usr/bin/firefox"
-bindsym $mod+n exec "/usr/bin/urxvtc"
+bindsym $mod+n exec "/usr/bin/thunar"
 
 # Redirect sound to headphones
 bindsym $mod+Shift+m exec "/usr/local/bin/switch-audio-port"
