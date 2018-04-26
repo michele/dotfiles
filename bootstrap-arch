@@ -13,7 +13,7 @@ then
 fi
 
 printf "Let's install Tilix\n"
-sudo pacman -S tilix
+sudo pacman -S rxvt-unicode urxvt-perls
 
 printf "Now add support for smartcards to GnuPG\n"
 sudo pacman -S pcsclite ccid
