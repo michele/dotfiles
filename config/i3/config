@@ -126,6 +126,7 @@ bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcu
 
 # lock
 bindsym $mod+Shift+x exec betterlockscreen --lock
+#bindsym $mod+Shift+x exec i3lock --lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -252,9 +253,9 @@ exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
 exec --no-startup-id "pulseaudio --start"
 #exec --no-startup-id synclient VertScrollDelta=-111
-exec --no-startup-id "nitrogen --restore"
+#exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id redshift
 exec --no-startup-id dropbox
-exec --no-startup-id "sleep 5s" # && kalu"
+exec --no-startup-id "sleep 5s"
 
 assign [class="google-chrome"]  $w3

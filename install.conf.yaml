@@ -16,6 +16,7 @@
     ~/.config/terminator: 'config/terminator'
     ~/.config/chromium-flags.conf: 'config/chromium-flags.conf'
     ~/.dotfiles: ''
+    ~/.emacs.d:
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: 'gnupg/gpg-agent.conf'
     ~/.msmtprc:
@@ -27,6 +28,7 @@
     ~/.oh-my-zsh/custom/plugins/gopass: 'oh-my-zsh/custom/plugins/gopass'
     ~/.pam_environment:
     ~/.profile:
+    ~/.spacemacs:
     ~/.tmux.conf:
     ~/.tmuxline:
     ~/.xmodmaprc:
