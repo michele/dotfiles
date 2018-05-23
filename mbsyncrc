@@ -1,0 +1,64 @@
+# IMAP keeps an "internaldate" attribute for messages, which is separate
+# from the date given in the message header, set based upon when the
+# message was first received.  Fastmail's webmail interface at least
+# uses this attribute to properly order messages chronologically.
+#   The CopyArrivalDate option isn't well documented but it seems that when
+# synchronising a new message it uses the Maildir file's Modify date as the
+# IMAP internaldate attribute and vice versa. Otherwise it seemed the
+# synchronisation time was being used instead. By setting the option here it's
+# enabled by default for all Channels.
+CopyArrivalDate yes
+
+IMAPAccount finotto
+Host imap.fastmail.com
+SSLType IMAPS
+SSLVersions TLSv1.2
+User m@finotto.org
+PassCmd "gopass emails/m@finotto.org"
+
+IMAPStore finotto-remote
+Account finotto
+
+MaildirStore finotto-local
+# The trailing "/" is important
+Path ~/.mail/finotto/
+Inbox ~/.mail/finotto/INBOX
+Flatten .
+
+Channel finotto
+Master :finotto-remote:
+Slave :finotto-local:
+Patterns % !*Airmail* !*Starred* !*content-marketing*
+Expunge Slave
+SyncState *
+Sync All
+Create Both
+
+IMAPAccount nearit
+Host imap.gmail.com
+SSLType IMAPS
+SSLVersions TLSv1.2
+User michele@nearit.com
+PassCmd "gopass emails/michele@nearit.com"
+
+IMAPStore nearit-remote
+Account nearit
+
+MaildirStore nearit-local
+# The trailing "/" is important
+Path ~/.mail/nearit/
+Inbox ~/.mail/nearit/INBOX
+Flatten .
+
+Channel nearit
+Master :nearit-remote:
+Slave :nearit-local:
+# Despite the delimiter being "." locally I had to use "/" here.
+Patterns * !"[Gmail]/Important" !"[Gmail]/Spam"
+# Apparently Gmail's IMAP implementation is non-standard, so we rather have to
+# move messages to the trash folder, instead of deleting them. Otherwise they'll
+# linger in "All Mail". http://notmuch.198994.n3.nabble.com/Sync-mail-deletion-with-Notmuch-mbsync-for-gmail-tp4036008.html
+Expunge Slave
+SyncState *
+Sync All
+Create Both

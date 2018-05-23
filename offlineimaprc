@@ -2,17 +2,17 @@
 ui = ttyui
 accounts = MicheleFinotto
 fsync = False
-metadata = ~/.mail/.offlineimap
+metadata = ~/.mailbkp/.offlineimap
 pythonfile = ~/.offlineimap.py
 
 [Account MicheleFinotto]
 localrepository = MicheleFinotto-Local
 remoterepository = MicheleFinotto-Remote
-postsynchook = ~/.bin/notmuch-hook
+# postsynchook = ~/.bin/notmuch-hook
 
 [Repository MicheleFinotto-Local]
 type = Maildir
-localfolders = ~/.mail/finotto
+localfolders = ~/.mailbkp/finotto
 
 [Repository MicheleFinotto-Remote]
 maxconnections = 3
@@ -39,11 +39,11 @@ footer = "\n"
 [Account NearIT]
 localrepository = NearIT-Local
 remoterepository = NearIT-Remote
-postsynchook = ~/.bin/notmuch-hook
+# postsynchook = ~/.bin/notmuch-hook
 
 [Repository NearIT-Local]
 type = Maildir
-localfolders = ~/.mail/nearit.com
+localfolders = ~/.mailbkp/nearit.com
 nametrans = lambda folder: {'drafts':  '[Gmail]/Drafts',
                             'sent':    '[Gmail]/Sent Mail',
                             'flagged': '[Gmail]/Starred',

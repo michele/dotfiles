@@ -19,6 +19,7 @@
     ~/.emacs.d:
     ~/.gitconfig:
     ~/.gnupg/gpg-agent.conf: 'gnupg/gpg-agent.conf'
+    ~/.mbsyncrc:
     ~/.msmtprc:
     ~/.neomuttrc:
     ~/.notmuch-config:
