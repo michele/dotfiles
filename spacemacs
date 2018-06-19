@@ -8,6 +8,7 @@ You should not put any user code in this function besides modifying the variable
 values."
     (setq-default dotspacemacs-configuration-layers
                   '(
+                    csv
                     (mu4e :variables
                           mu4e-installation-path "/usr/share/emacs/site-lisp")
                   (mu4e :variables mu4e-account-alist t))
