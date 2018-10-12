@@ -54,7 +54,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rails archlinux bundler kubectl z git-extras golang themes docker gem aws gpg-agent gopass)
+plugins=(git rails archlinux bundler kubectl z git-extras golang themes docker gem aws gpg-agent gopass notes)
 
 source $ZSH/oh-my-zsh.sh
 
