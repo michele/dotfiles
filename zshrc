@@ -56,7 +56,22 @@ COMPLETION_WAITING_DOTS="true"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git rails archlinux bundler kubectl z git-extras golang themes docker gem aws gpg-agent gopass)
 
+if [ "$TERM" == "dumb" ]; then
+   export DISABLE_AUTO_UPDATE="true"
+fi
+
 source $ZSH/oh-my-zsh.sh
+
+# Emacs tramp fix
+if [[ "$TERM" == "dumb" ]]
+then
+  unsetopt zle
+  unsetopt prompt_cr
+  unsetopt prompt_subst
+  unfunction precmd
+  unfunction preexec
+  PS1='$ '
+fi
 
 # User configuration
 
