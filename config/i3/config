@@ -251,7 +251,6 @@ exec xrandr --dpi 192
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 exec --no-startup-id "compton -cC"
 exec --no-startup-id nm-applet
-exec --no-startup-id "pulseaudio --start"
 #exec --no-startup-id synclient VertScrollDelta=-111
 #exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id redshift
