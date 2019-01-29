@@ -1,0 +1,4 @@
+#!/bin/bash
+for i in $(seq 2); do
+  i3-msg '[class="Alacritty"] floating toggle'
+done

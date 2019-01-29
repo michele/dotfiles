@@ -29,7 +29,8 @@ hide_edge_borders both
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvtc
+bindsym $mod+Return exec alacritty
+# bindsym $mod+Return exec urxvtc
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -39,7 +40,8 @@ bindsym $mod+Shift+q kill
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+bindsym $mod+d exec --no-startup-id rofi -show run
 
 # change focus
 bindsym $mod+j focus left
@@ -249,7 +251,8 @@ bindsym $mod+Shift+u exec "/home/michele/go/bin/gopass ls --flat | dmenu | xargs
 # Autostart apps
 exec xrandr --dpi 192
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-exec --no-startup-id "compton -cC"
+#exec --no-startup-id "compton -cC"
+exec --no-startup-id compton -CG --unredir-if-possible --config /dev/null
 exec --no-startup-id nm-applet
 #exec --no-startup-id synclient VertScrollDelta=-111
 #exec --no-startup-id "nitrogen --restore"
