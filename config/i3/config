@@ -246,6 +246,8 @@ bindsym $mod+Control+Shift+g exec xrandr --output DP1 --off
 # Setup mx scroll
 bindsym $mod+Control+m exec ~/.bin/mx-scroll.sh
 
+bindsym $mod+Shift+d exec "date +%Y%m%d%H%M%S | xsel -pb"
+
 # gopass
 bindsym $mod+Shift+u exec "/home/michele/go/bin/gopass ls --flat | dmenu | xargs --no-run-if-empty gopass show -c"
 # Autostart apps

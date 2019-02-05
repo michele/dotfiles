@@ -109,10 +109,10 @@ mailboxes "=INBOX" \
         "=INBOX.Drafts" \
         "=INBOX.Trash" \
         "+---------------" \
-        "=INBOX.+SaneBulk" \
-        "=INBOX.+SaneLater" \
-        "=INBOX.+SaneNews" \
-        "=INBOX.Memo"
+        "=+SaneBulk" \
+        "=+SaneLater" \
+        "=+SaneNews" \
+        "=Memo"
 
 # Other special folders.
 set mbox      = "=INBOX.Archive"
