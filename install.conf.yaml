@@ -32,6 +32,7 @@
     ~/.pam_environment:
     ~/.profile:
     ~/.spacemacs:
+    ~/.tigrc:
     ~/.tmux/renew_env.sh: 'tmux/renew_env.sh'
     ~/.tmux/tmux.remote.conf: 'tmux/tmux.remote.conf'
     ~/.tmux/yank.sh: 'tmux/yank.sh'
