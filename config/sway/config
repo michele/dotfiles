@@ -265,6 +265,10 @@ input "1133:45081:MX_Master_2S_Mouse" {
     natural_scroll enabled
 }
 
+input "1133:45082:MX_Anywhere_2S_Mouse" {
+    natural_scroll enabled
+}
+
 input "1739:0:Synaptics_TM3288-011" {
     natural_scroll enabled
     middle_emulation disabled
