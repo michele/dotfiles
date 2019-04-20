@@ -12,6 +12,7 @@
     ~/.config/i3status: 'config/i3status'
     ~/.config/notes: 'config/notes'
     ~/.config/nvim: 'config/nvim'
+    ~/.config/rofi: 'config/rofi'
     ~/.config/neomutt: 'config/neomutt'
     ~/.config/redshift.conf: 'config/redshift.conf'
     ~/.config/sway: 'config/sway'
