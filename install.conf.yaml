@@ -15,6 +15,7 @@
     ~/.config/rofi: 'config/rofi'
     ~/.config/neomutt: 'config/neomutt'
     ~/.config/redshift.conf: 'config/redshift.conf'
+    ~/.config/restic: 'config/restic'
     ~/.config/sway: 'config/sway'
     ~/.config/terminator: 'config/terminator'
     ~/.config/chromium-flags.conf: 'config/chromium-flags.conf'
