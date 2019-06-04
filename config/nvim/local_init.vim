@@ -1,4 +1,10 @@
 let NERDTreeShowHidden=1
+"
+" example
+let g:nv_search_paths = ['~/notes']
+" String. Set to '' (the empty string) if you don't want an extension appended by default.
+" Don't forget the dot, unless you don't want one.
+let g:nv_default_extension = '.md'
 
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 

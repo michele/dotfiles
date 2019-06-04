@@ -7,3 +7,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'edkolev/tmuxline.vim'
 Plug 'jreybert/vimagit'
 Plug 'ekalinin/dockerfile.vim'
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'arcticicestudio/nord-vim'
+Plug 'https://github.com/Alok/notational-fzf-vim'
+Plug 'vimwiki/vimwiki'
