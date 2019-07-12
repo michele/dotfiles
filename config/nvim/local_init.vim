@@ -6,6 +6,8 @@ let g:nv_search_paths = ['~/notes']
 " Don't forget the dot, unless you don't want one.
 let g:nv_default_extension = '.md'
 
+nmap <Leader>d <Plug>VimwikiMakeDiaryNote
+
 let g:ycm_server_python_interpreter = '/usr/bin/python2'
 
 nnoremap <silent> <Leader>bd :Bclose<CR>
