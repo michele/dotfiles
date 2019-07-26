@@ -10,6 +10,16 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 set $mod Mod4
+set $term alacritty
+# set $menu rofi -show run
+set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# Home row direction keys, like vim
+set $left h
+set $down j
+set $up k
+set $right l
+
+# xwayland disabled
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -26,10 +36,10 @@ hide_edge_borders both
 # font, it doesn’t scale on retina/hidpi displays.
 
 # Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
+floating_modifier $mod normal
 
 # start a terminal
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec $term
 # bindsym $mod+Return exec urxvtc
 
 # kill focused window
@@ -41,7 +51,7 @@ bindsym $mod+Shift+q kill
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-bindsym $mod+d exec --no-startup-id rofi -show run
+bindsym $mod+d exec $menu
 
 # change focus
 bindsym $mod+j focus left
@@ -124,8 +134,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-
+bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
 # lock
 bindsym $mod+Shift+x exec swaylock --image ~/.config/i3/lock.png --scaling fill
 #bindsym $mod+Shift+x exec i3lock --lock
@@ -288,12 +297,11 @@ input "1:1:AT_Translated_Set_2_keyboard" {
 #exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 #exec --no-startup-id "compton -cC"
 #exec --no-startup-id compton -CG --unredir-if-possible --config /dev/null
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
 #exec --no-startup-id synclient VertScrollDelta=-111
 #exec --no-startup-id "nitrogen --restore"
-exec --no-startup-id redshift
-exec --no-startup-id dropbox
-exec --no-startup-id "sleep 5s"
+#exec --no-startup-id redshift
+#exec --no-startup-id dropbox
+#exec --no-startup-id "sleep 5s"
 
 assign [class="google-chrome"]  $w3
-
