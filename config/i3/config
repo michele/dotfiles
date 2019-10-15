@@ -260,6 +260,7 @@ exec --no-startup-id nm-applet
 #exec --no-startup-id "nitrogen --restore"
 exec --no-startup-id redshift
 exec --no-startup-id dropbox
+exec_always --no-startup-id conky
 exec --no-startup-id "sleep 5s"
 
 assign [class="google-chrome"]  $w3

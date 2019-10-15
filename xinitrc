@@ -1,5 +1,7 @@
 #!/bin/bash
 source ~/.profile
+dbus-update-activation-environment --systemd DISPLAY
+eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
 xmodmap ~/.xmodmaprc
 setxkbmap -option compose:rctrl
 setxkbmap -option compose:ralt
