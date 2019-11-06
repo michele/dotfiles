@@ -11,3 +11,5 @@ Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'arcticicestudio/nord-vim'
 Plug 'https://github.com/Alok/notational-fzf-vim'
 Plug 'vimwiki/vimwiki'
+Plug 'michal-h21/vim-zettel'
+Plug 'dhruvasagar/vim-dotoo'
