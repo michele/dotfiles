@@ -1,2 +1,4 @@
 #export GDK_SCALE=2
 #setxkbmap -option compose:rctrl
+export KITTY_ENABLE_WAYLAND=1
+export MOZ_ENABLE_WAYLAND=1

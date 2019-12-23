@@ -27,4 +27,8 @@
     whitespace = nowarn
 [push]
     default = simple
-
+[sendemail]
+	smtpserver = smtp.fastmail.com
+	smtpuser = m@finotto.org
+	smtpencryption = ssl
+	smtpserverport = 465
