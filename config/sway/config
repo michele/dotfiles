@@ -11,7 +11,8 @@
 
 set $mod Mod4
 set $term alacritty
-set $menu dmenu_path | bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 10" | xargs swaymsg exec --
+set $menu dmenu_path | wofi --show drun -i | xargs swaymsg exec --
+#set $menu dmenu_path | bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 10" | xargs swaymsg exec --
 #set $menu /home/michele/.bin/sway-launcher
 # set $menu rofi -show drun
 #set $menu dmenu_path | dmenu | xargs swaymsg exec --
@@ -57,6 +58,9 @@ bindsym $mod+Shift+q kill
 # installed.
 #bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id $menu
+
+# Clipboard history
+bindsym $mod+y exec clipman pick -t wofi
 
 # change focus
 bindsym $mod+j focus left
@@ -210,8 +214,11 @@ for_window [class="Kalu"] floating enable
 # Multimedia Keys
 
 # volume
-bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
-bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioRaiseVolume exec amixer -D pulse sset Master 5%+ && pkill -RTMIN+1 i3blocks
+#bindsym XF86AudioLowerVolume exec amixer -D pulse sset Master 5%- && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioRaiseVolume exec amixer set Master 5%+ && pkill -RTMIN+1 i3blocks
+bindsym XF86AudioLowerVolume exec amixer set Master 5%- && pkill -RTMIN+1 i3blocks
+
 
 # granular volume control
 bindsym $mod+XF86AudioRaiseVolume exec amixer -D pulse sset Master 1%+ && pkill -RTMIN+1 i3blocks
@@ -298,6 +305,11 @@ input "1241:519:USB-HID_Keyboard" {
     xkb_options compose:ralt
 }
 
+input "7504:24866:Ultimate_Gadget_Laboratories_Ultimate_Hacking_Keyboard" {
+    xkb_options compose:rctrl
+    xkb_options compose:ralt
+}
+
 input "1:1:AT_Translated_Set_2_keyboard" {
     xkb_options ctrl:nocaps
     xkb_options compose:rctrl
@@ -329,5 +341,6 @@ input type:keyboard {
 #exec --no-startup-id redshift
 #exec --no-startup-id dropbox
 #exec --no-startup-id "sleep 5s"
+exec wl-paste -t text --watch clipman store
 
 assign [class="google-chrome"]  $w3

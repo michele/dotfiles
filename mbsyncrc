@@ -68,7 +68,7 @@ Host mail.finotto.mx
 SSLType IMAPS
 SSLVersions TLSv1.2
 User m@finotto.io
-PassCmd "gopass emails/m@finotto.org"
+PassCmd "gopass emails/m@finotto.io"
 
 IMAPStore finottoio-remote
 Account finottoio

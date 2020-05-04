@@ -112,3 +112,6 @@ if [ -f '~/google-cloud-sdk/completion.zsh.inc' ]; then source '~/google-cloud-s
 if [ -f ~/.zshrc_local ]; then
     source ~/.zshrc_local
 fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
